@@ -32,6 +32,8 @@ El programa lee un código fuente, lo analiza utilizando un conjunto de expresio
 
 Para ilustrar cómo funciona el programa, sigue estos pasos:
 
+![Image](https://github.com/user-attachments/assets/3ba164e4-a801-4b70-b072-19cd2e6ba9c6)
+
 1. Ingresa el siguiente código fuente en el área de texto:
 
    ```c
