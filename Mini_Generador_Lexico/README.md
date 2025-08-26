@@ -18,10 +18,9 @@ El programa identifica y clasifica tokens en las siguientes categorías:
 
 ---
 
-## Código Principal
+## Código 
 
 ```python
-# Ejemplo de ejecución
 input_text = input("Enter values separated by spaces: ")
 print_token_analysis(input_text)
 ```
@@ -30,8 +29,9 @@ print_token_analysis(input_text)
 
 ## Resultados de Ejecución
 
+Se prueba con la cadena: `hola 9 9.8 10 mundo`
 
-![Ejecución del programa](Mini_Generador_Lexico\image.png)C:\Users\leoba\OneDrive\Documentos\GitHub\SEM_Traductores_II\Mini_Generador_Lexico\README.md
+![Ejecución del programa](https://github.com/leoneleoss/SEM_Traductores_II/blob/3710934a63fef84cde19841f310019a8aad9c84e/Mini_Generador_Lexico/image.png)C:\Users\leoba\OneDrive\Documentos\GitHub\SEM_Traductores_II\Mini_Generador_Lexico\README.md
 
 
 ---
