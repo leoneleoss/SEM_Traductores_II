@@ -31,7 +31,7 @@ print_token_analysis(input_text)
 ## Resultados de Ejecución
 
 
-![Ejecución del programa](Mini_Generador_Lexico\image.png)
+![Ejecución del programa](Mini_Generador_Lexico\image.png)C:\Users\leoba\OneDrive\Documentos\GitHub\SEM_Traductores_II\Mini_Generador_Lexico\README.md
 
 
 ---
