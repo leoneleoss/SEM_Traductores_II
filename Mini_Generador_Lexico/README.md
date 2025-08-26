@@ -31,7 +31,7 @@ print_token_analysis(input_text)
 ## Resultados de Ejecución
 
 
-![Ejecución del programa](Mini_Generador_Lexico/README.md)
+![Ejecución del programa](Mini_Generador_Lexico/image.png)
 
 *(Reemplazar `ruta/a/la/imagen.png` con la ruta de la imagen correspondiente en el repositorio).*
 
