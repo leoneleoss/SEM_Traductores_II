@@ -1,38 +1,41 @@
-# Analizador Léxico (Lexer)
+>  *Cortés Pérez Leobardo Leonel*
+> 
+>  *SEMINARIO DE TRADUCTORES II - MICHEL EMANUEL LOPEZ FRANCO*
+# Analizador Léxico 
 ## ¿Qué es un Analizador Léxico?
 Un analizador léxico (también conocido como lexer o scanner) es la primera fase de un compilador o intérprete. Su función principal es convertir una secuencia de caracteres de entrada (código fuente) en una secuencia de tokens válidos. Estos tokens representan los componentes léxicos del lenguaje, como palabras clave, identificadores, operadores, literales y símbolos especiales.
 
 ## Funciones principales:
-1. Eliminar caracteres irrelevantes como espacios en blanco, tabuladores y comentarios.
-
-Identificar tokens mediante expresiones regulares o reglas definidas.
-
-Reportar errores léxicos cuando se encuentran caracteres o secuencias no válidas.
-
-Interactuar con el analizador sintáctico (parser) entregándole tokens para su posterior procesamiento.
+- Eliminar caracteres irrelevantes como espacios en blanco, tabuladores y comentarios.
+- Identificar tokens mediante expresiones regulares o reglas definidas.
+- Reportar errores léxicos cuando se encuentran caracteres o secuencias no válidas.
+- Interactuar con el analizador sintáctico (parser) entregándole tokens para su posterior procesamiento.
 
 ## Componentes de un Analizador Léxico
-Tabla de símbolos: Almacena identificadores y palabras reservadas para su rápido acceso.
-
-Expresiones regulares: Definen patrones para reconocer tokens.
-
-Autómatas finitos: Implementan la lógica para matching de tokens (determinísticos o no determinísticos).
+1. **Tabla de símbolos:** Almacena identificadores y palabras reservadas para su rápido acceso.
+2. **Expresiones regulares:** Definen patrones para reconocer tokens.
+3. **Autómatas finitos:** Implementan la lógica para matching de tokens (determinísticos o no determinísticos).
 
 ## Ejemplo de Tokenización
 Código fuente:
 
-`python
-x = 42 + y`
-Tokens generados:
+```python
+x = 42 + y
+```
 
-Token	Tipo
-x	IDENTIFICADOR
-=	OPERADOR
-42	LITERAL_NUM
-+	OPERADOR
-y	IDENTIFICADOR
-Implementación Básica en Python
-python
+## Tokens generados:
+
+| Token | Tipo          |
+|-------|---------------|
+| x     | IDENTIFICADOR |
+| =     | OPERADOR      |
+| 42    | LITERAL_NUM   |
+| +     | OPERADOR      |
+| y     | IDENTIFICADOR |
+
+## Implementación Básica en Python
+
+```python
 import re
 
 tokens = [
@@ -43,7 +46,7 @@ tokens = [
     (r'[=+*-]', 'OPERADOR'),       # Operadores
 ]
 
-`
+
 def lex(code):
     tokens_list = []
     pos = 0
@@ -62,7 +65,7 @@ def lex(code):
         else:
             pos = match.end(0)
     return tokens_list
- `
+
 
 # Prueba del analizador léxico
 codigo_ejemplo = "x = 42 + y"
@@ -70,25 +73,24 @@ resultado = lex(codigo_ejemplo)
 print("Tokens generados:")
 for token in resultado:
     print(f"Tipo: {token[0]}, Valor: '{token[1]}'")
-Resultado de la Ejecución
+
+```
+## Resultado de la Ejecución
 Al ejecutar el código anterior, se obtiene el siguiente resultado:
 
-text
+```
 Tokens generados:
 Tipo: ID, Valor: 'x'
 Tipo: OPERADOR, Valor: '='
 Tipo: LITERAL_NUM, Valor: '42'
 Tipo: OPERADOR, Valor: '+'
 Tipo: ID, Valor: 'y'
-Este resultado muestra cómo el analizador léxico procesa la cadena de entrada "x = 42 + y" y la convierte en una secuencia de tokens con sus respectivos tipos y valores.
+```
+Este resultado muestra cómo el analizador léxico procesa la cadena de entrada `"x = 42 + y"` y la convierte en una secuencia de tokens con sus respectivos tipos y valores.
 
 ## Bibliografía
-Aho, A. V., Lam, M. S., Sethi, R., & Ullman, J. D. (2006). Compilers: Principles, Techniques, and Tools (2nd ed.). Addison-Wesley.
-
-Grune, D., & Jacobs, C. J. H. (2008). Parsing Techniques: A Practical Guide (2nd ed.). Springer.
-
-Appel, A. W. (2002). Modern Compiler Implementation in Java (2nd ed.). Cambridge University Press.
-
-Cooper, K. D., & Torczon, L. (2011). Engineering a Compiler (2nd ed.). Morgan Kaufmann.
-
-Levine, J. R. (2009). Flex & Bison: Text Processing Tools. O'Reilly Media.
+- Aho, A. V., Lam, M. S., Sethi, R., & Ullman, J. D. (2006). Compilers: Principles, Techniques, and Tools (2nd ed.). Addison-Wesley.
+- Grune, D., & Jacobs, C. J. H. (2008). Parsing Techniques: A Practical Guide (2nd ed.). Springer.
+- Appel, A. W. (2002). Modern Compiler Implementation in Java (2nd ed.). Cambridge University Press.
+- Cooper, K. D., & Torczon, L. (2011). Engineering a Compiler (2nd ed.). Morgan Kaufmann.
+- Levine, J. R. (2009). Flex & Bison: Text Processing Tools. O'Reilly Media.
