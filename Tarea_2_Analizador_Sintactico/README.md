@@ -1,4 +1,4 @@
-# `sintactico.py` — Analizador Sintáctico LR (versión procedural)
+# `sintactico.py` — Analizador Sintáctico LR
 
 Simulador de análisis sintáctico LR (shift-reduce) que muestra en consola, paso a paso, el contenido de la pila, la entrada restante y la acción tomada (`shift`, `reduce` o `accept`).
 
@@ -38,8 +38,6 @@ El programa imprime una tabla con las columnas **Paso**, **Pila**, **Entrada** y
 
 ## Captura de ejecución
 
-Agrega aquí la captura de pantalla de la ejecución de `sintactico.py` en la terminal (por ejemplo, analizando `a+b` con el Ejercicio 1).
-
 ![Ejecución de sintactico.py](capturas/sintactico.png)
 
-> Sugerencia: guarda la imagen en una carpeta `capturas/` junto a este README, con el nombre `sintactico.png`, para que el enlace de arriba se muestre correctamente en GitHub o en el visor de Markdown.
+
