@@ -63,4 +63,3 @@ El programa imprime la misma tabla con columnas **Paso**, **Pila**, **Entrada** 
 
 ![Ejecución de sintactico_objetos.py](capturas/sintactico_objetos.png)
 
-> Sugerencia: guarda la imagen en una carpeta `capturas/` junto a este README, con el nombre `sintactico_objetos.png`, para que el enlace de arriba se muestre correctamente en GitHub o en el visor de Markdown.
